@@ -103,7 +103,7 @@ def get_loss(name, num_classes, config, train_loader):
         loss = fl(config)
     elif name == 'mae':
         from loss import mae
-        loss = mae(config)
+        loss = mae(num_classes)
     elif name == 'nce':
         from loss import nce
         loss = nce(num_classes)
